@@ -13,17 +13,16 @@ services:
       - db
     command: npm start
   db:
-    image: posgres:alpine
-    environment:
-        - POSTGRES_USER=${PGUSER}
-        - POSTGRES_PASSWORD=${PGPASSWORD}
-        - POSTGRES_DB=${PGDATABASE}
-        - POSTGRES_HOST=${PGHOST}
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres-db:/var/lib/postresql/data
-
+      image: postgres:alpine
+      environment:
+          - POSTGRES_USER=${PGUSER}
+          - POSTGRES_PASSWORD=${PGPASSWORD}
+          - POSTGRES_DB=${PGDATABASE}
+          - POSTGRES_HOST=${PGHOST}
+      ports:
+          - "5432:5432"
+      volumes:
+          - postgres-db:/var/lib/postgresql/data
 
 volumes:
   node_modules:
