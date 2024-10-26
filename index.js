@@ -3,6 +3,8 @@ const app = express()
 const port = process.env.PORT || 3000
 const host = '0.0.0.0'
 
+const passport = require('passport')
+
 
 //Frontend layouts
 const path = require('path')
@@ -14,6 +16,8 @@ app.set('view engine', 'ejs')
 
 // Static files
 app.use(express.static(__dirname + '/public'))
+
+app.use(passport.initialize())
 
 //Routes
 app.use('/', require('./config/routes'))

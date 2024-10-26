@@ -10,13 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "base64url": "^3.0.1",
     "ejs": "^3.1.10",
     "express": "^4.21.0",
     "express-ejs-layouts": "^2.5.1",
     "passport": "^0.7.0",
     "passport-fido2-webauthn": "^0.1.0",
     "pg": "^8.13.0",
-    "sequelize": "^6.37.4"
+    "sequelize": "^6.37.4",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7",
